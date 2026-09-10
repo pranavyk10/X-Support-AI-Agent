@@ -1,0 +1,269 @@
+{
+  "trivial": {
+    "n": 200,
+    "intent": {
+      "accuracy": 0.39,
+      "macro_f1": 0.06235011990407673,
+      "weighted_f1": 0.21884892086330932,
+      "per_class": {
+        "account_access": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 20.0
+        },
+        "account_compromised": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "feature_how_to": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 12.0
+        },
+        "privacy_or_data": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 4.0
+        },
+        "safety_or_abuse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 55.0
+        },
+        "spam_or_bots": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 16.0
+        },
+        "suspension_or_lock": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 12.0
+        },
+        "thanks_or_other": {
+          "precision": 0.39,
+          "recall": 1.0,
+          "f1-score": 0.5611510791366906,
+          "support": 78.0
+        },
+        "verification": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "accuracy": 0.39,
+        "macro avg": {
+          "precision": 0.043333333333333335,
+          "recall": 0.1111111111111111,
+          "f1-score": 0.06235011990407673,
+          "support": 200.0
+        },
+        "weighted avg": {
+          "precision": 0.1521,
+          "recall": 0.39,
+          "f1-score": 0.21884892086330932,
+          "support": 200.0
+        }
+      }
+    },
+    "escalation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.595,
+      "escalate_rate_pred": 0.0,
+      "escalate_rate_true": 0.405
+    },
+    "reply": {
+      "mean_embedding_similarity": 0.44092532992362976,
+      "median_embedding_similarity": 0.44585180282592773
+    }
+  },
+  "simple": {
+    "n": 200,
+    "intent": {
+      "accuracy": 0.9,
+      "macro_f1": 0.879640050510623,
+      "weighted_f1": 0.8991393578285336,
+      "per_class": {
+        "account_access": {
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1-score": 0.9473684210526315,
+          "support": 20.0
+        },
+        "account_compromised": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1.0
+        },
+        "feature_how_to": {
+          "precision": 0.6111111111111112,
+          "recall": 0.9166666666666666,
+          "f1-score": 0.7333333333333333,
+          "support": 12.0
+        },
+        "privacy_or_data": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1-score": 0.8,
+          "support": 4.0
+        },
+        "safety_or_abuse": {
+          "precision": 1.0,
+          "recall": 0.9272727272727272,
+          "f1-score": 0.9622641509433962,
+          "support": 55.0
+        },
+        "spam_or_bots": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1-score": 0.6666666666666666,
+          "support": 16.0
+        },
+        "suspension_or_lock": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1-score": 0.8888888888888888,
+          "support": 12.0
+        },
+        "thanks_or_other": {
+          "precision": 0.9012345679012346,
+          "recall": 0.9358974358974359,
+          "f1-score": 0.9182389937106918,
+          "support": 78.0
+        },
+        "verification": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 2.0
+        },
+        "accuracy": 0.9,
+        "macro avg": {
+          "precision": 0.8865569272976681,
+          "recall": 0.908870758870759,
+          "f1-score": 0.879640050510623,
+          "support": 200.0
+        },
+        "weighted avg": {
+          "precision": 0.9194814814814815,
+          "recall": 0.9,
+          "f1-score": 0.8991393578285336,
+          "support": 200.0
+        }
+      }
+    },
+    "escalation": {
+      "precision": 0.6504065040650406,
+      "recall": 0.9876543209876543,
+      "f1": 0.7843137254901961,
+      "accuracy": 0.78,
+      "escalate_rate_pred": 0.615,
+      "escalate_rate_true": 0.405
+    },
+    "reply": {
+      "mean_embedding_similarity": 0.9148935079574585,
+      "median_embedding_similarity": 1.0
+    }
+  },
+  "agent": {
+    "n": 200,
+    "intent": {
+      "accuracy": 0.9,
+      "macro_f1": 0.879640050510623,
+      "weighted_f1": 0.8991393578285336,
+      "per_class": {
+        "account_access": {
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1-score": 0.9473684210526315,
+          "support": 20.0
+        },
+        "account_compromised": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1.0
+        },
+        "feature_how_to": {
+          "precision": 0.6111111111111112,
+          "recall": 0.9166666666666666,
+          "f1-score": 0.7333333333333333,
+          "support": 12.0
+        },
+        "privacy_or_data": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1-score": 0.8,
+          "support": 4.0
+        },
+        "safety_or_abuse": {
+          "precision": 1.0,
+          "recall": 0.9272727272727272,
+          "f1-score": 0.9622641509433962,
+          "support": 55.0
+        },
+        "spam_or_bots": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1-score": 0.6666666666666666,
+          "support": 16.0
+        },
+        "suspension_or_lock": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1-score": 0.8888888888888888,
+          "support": 12.0
+        },
+        "thanks_or_other": {
+          "precision": 0.9012345679012346,
+          "recall": 0.9358974358974359,
+          "f1-score": 0.9182389937106918,
+          "support": 78.0
+        },
+        "verification": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 2.0
+        },
+        "accuracy": 0.9,
+        "macro avg": {
+          "precision": 0.8865569272976681,
+          "recall": 0.908870758870759,
+          "f1-score": 0.879640050510623,
+          "support": 200.0
+        },
+        "weighted avg": {
+          "precision": 0.9194814814814815,
+          "recall": 0.9,
+          "f1-score": 0.8991393578285336,
+          "support": 200.0
+        }
+      }
+    },
+    "escalation": {
+      "precision": 0.6504065040650406,
+      "recall": 0.9876543209876543,
+      "f1": 0.7843137254901961,
+      "accuracy": 0.78,
+      "escalate_rate_pred": 0.615,
+      "escalate_rate_true": 0.405
+    },
+    "reply": {
+      "mean_embedding_similarity": 0.7668185234069824,
+      "median_embedding_similarity": 0.8499219417572021
+    }
+  }
+}
