@@ -1,0 +1,20 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+data/raw/
+*.log
+.idea/
+.vscode/
+.cache/
+# Allow committed samples / golden / results
+!data/processed/
+!data/golden/
+!data/judge_agreement/
+!data/retrieval_index/
+!results/
