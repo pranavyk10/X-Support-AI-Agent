@@ -1,0 +1,223 @@
+# TwitterSupport / X Support intent taxonomy
+# Derived from keyword clustering + manual review of TwitterSupport threads
+# in the Kaggle Customer Support on Twitter dataset (pre-rebrand era).
+
+brand: TwitterSupport
+brand_display: X Support (historically TwitterSupport)
+
+intents:
+  - id: account_access
+    label: Account access / login
+    description: Cannot log in, forgot password, 2FA issues, locked out of sign-in.
+    escalate_risk: medium
+    keywords:
+      - login
+      - log in
+      - password
+      - can't access
+      - cannot access
+      - 2fa
+      - two factor
+      - authenticate
+      - sign in
+      - signing in
+    examples:
+      - "@TwitterSupport I can't log into my account after resetting my password"
+      - "Forgot password and the reset email never arrives @TwitterSupport"
+
+  - id: account_compromised
+    label: Account compromised / hacked
+    description: Account taken over, unauthorized tweets, password changed by attacker.
+    escalate_risk: high
+    keywords:
+      - hacked
+      - compromised
+      - stolen
+      - someone took
+      - unauthorized
+      - not me posting
+      - account taken
+    examples:
+      - "@TwitterSupport my account was hacked and they changed the email"
+      - "Someone is tweeting from my account please help @TwitterSupport"
+
+  - id: suspension_or_lock
+    label: Suspension / lock / ban
+    description: Account suspended, locked, limited, or permanently banned.
+    escalate_risk: high
+    keywords:
+      - suspended
+      - suspension
+      - locked
+      - banned
+      - ban
+      - restricted
+      - limited
+      - appeal
+    examples:
+      - "@TwitterSupport why was my account suspended with no explanation?"
+      - "Account locked for weeks, appeal ignored @TwitterSupport"
+
+  - id: verification
+    label: Verification / blue check
+    description: Verification badge requests, verification process questions.
+    escalate_risk: low
+    keywords:
+      - verified
+      - verification
+      - blue check
+      - verify my
+      - tick
+    examples:
+      - "@TwitterSupport how do I get verified?"
+      - "Verification application pending for months @TwitterSupport"
+
+  - id: app_or_bug
+    label: App / bug / performance
+    description: App crashes, bugs, feed issues, notifications broken, platform glitches.
+    escalate_risk: low
+    keywords:
+      - bug
+      - crash
+      - glitch
+      - not loading
+      - freezes
+      - freeze
+      - ios app
+      - android app
+      - notification
+      - app keeps
+      - app crash
+    examples:
+      - "@TwitterSupport the iOS app keeps crashing when I open DMs"
+      - "Notifications stopped working after the update @TwitterSupport"
+
+  - id: ads_or_promoted
+    label: Ads / promoted / Ads Manager
+    description: Promoted tweets, ads billing, Ads Manager, campaign issues.
+    escalate_risk: medium
+    keywords:
+      - ads manager
+      - promoted tweet
+      - advertising
+      - ad campaign
+      - ads account
+      - ads billing
+    examples:
+      - "@TwitterSupport my promoted tweet was rejected without reason"
+      - "Charged twice for an ad campaign @TwitterSupport"
+
+  - id: safety_or_abuse
+    label: Safety / abuse / harassment
+    description: Harassment, threats, abuse reports, doxxing, violent content.
+    escalate_risk: high
+    keywords:
+      - abuse
+      - harass
+      - harrass
+      - threat
+      - threaten
+      - bully
+      - bullying
+      - hate
+      - doxx
+      - doxxed
+      - violence
+      - racist
+      - misogyn
+      - suicide
+    examples:
+      - "@TwitterSupport this account is threatening me and Twitter won't act"
+      - "Getting harassed and my reports do nothing @TwitterSupport"
+
+  - id: privacy_or_data
+    label: Privacy / data / settings
+    description: Privacy settings, data download, personal info exposure, GDPR-like requests.
+    escalate_risk: medium
+    keywords:
+      - privacy
+      - personal data
+      - my data
+      - download my
+      - gdpr
+      - email exposed
+      - phone number
+      - settings
+    examples:
+      - "@TwitterSupport how do I download all my Twitter data?"
+      - "My email is visible somehow please fix @TwitterSupport"
+
+  - id: feature_how_to
+    label: Feature how-to
+    description: How to use a feature (lists, moments, mute, block, pin, etc.).
+    escalate_risk: low
+    keywords:
+      - how do i
+      - how to
+      - can i
+      - mute
+      - block
+      - list
+      - pin tweet
+      - moments
+    examples:
+      - "@TwitterSupport how do I mute words on Twitter?"
+      - "How can I pin a tweet to my profile? @TwitterSupport"
+
+  - id: spam_or_bots
+    label: Spam / bots / fake accounts
+    description: Spam floods, bot networks, fake followers, scam accounts.
+    escalate_risk: medium
+    keywords:
+      - spam
+      - bot
+      - bots
+      - fake account
+      - scam
+      - follower
+      - phishing
+    examples:
+      - "@TwitterSupport my mentions are full of spam bots"
+      - "This scam account is impersonating brands @TwitterSupport"
+
+  - id: thanks_or_other
+    label: Thanks / vague help / other
+    description: Gratitude, vague "help me" with no issue stated, or messages that do not map cleanly to other intents.
+    escalate_risk: low
+    keywords:
+      - thank
+      - thanks
+      - appreciate
+      - need help
+      - please help
+      - help me
+      - help please
+      - i need your help
+    examples:
+      - "@TwitterSupport thanks for the quick help!"
+      - "@TwitterSupport please help me"
+      - "@TwitterSupport I NEED YOUR HELP!!"
+
+high_risk_intents:
+  - account_compromised
+  - suspension_or_lock
+  - safety_or_abuse
+
+escalation_defaults:
+  min_classifier_confidence: 0.55
+  min_retrieval_similarity: 0.35
+  human_request_patterns:
+    - speak to a human
+    - real person
+    - human agent
+    - talk to someone
+    - escalate
+    - manager
+  pii_needed_patterns:
+    - dm me
+    - send dm
+    - direct message
+    - email
+    - phone
+    - username is
+    - handle is
