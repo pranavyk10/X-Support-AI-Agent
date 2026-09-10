@@ -1,4 +1,4 @@
-# X Support AI Agent (Hiver SDE Intern Take-Home)
+# X Support AI Agent 
 
 AI support agent for **TwitterSupport** (historical handle for X Support) built on the Kaggle *Customer Support on Twitter* dataset.
 
