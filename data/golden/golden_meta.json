@@ -1,0 +1,17 @@
+{
+  "n": 200,
+  "intent_counts": {
+    "account_access": 20,
+    "suspension_or_lock": 12,
+    "safety_or_abuse": 55,
+    "account_compromised": 1,
+    "thanks_or_other": 78,
+    "spam_or_bots": 16,
+    "feature_how_to": 12,
+    "privacy_or_data": 4,
+    "verification": 2
+  },
+  "escalate_rate": 0.405,
+  "seed": 42,
+  "source": "kaggle_twitter_support_real_preferred"
+}
