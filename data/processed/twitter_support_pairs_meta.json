@@ -1,0 +1,17 @@
+{
+  "brand": "TwitterSupport",
+  "n_pairs": 3757,
+  "weak_intent_counts": {
+    "thanks_or_other": 953,
+    "safety_or_abuse": 599,
+    "account_access": 358,
+    "feature_how_to": 337,
+    "app_or_bug": 316,
+    "suspension_or_lock": 265,
+    "spam_or_bots": 236,
+    "ads_or_promoted": 229,
+    "verification": 229,
+    "account_compromised": 164,
+    "privacy_or_data": 71
+  }
+}
